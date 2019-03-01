@@ -52,6 +52,22 @@
             <div class="invalid-feedback">{{ $errors->first('price') }}</div>
         @endif
     </div>
+    <div class="form-group col-12 col-md-6 col-xl-4">
+        <div class="input-group">
+            {{ Form::text('sale_price', null, [
+                    'class' => 'form-control' . ($errors->has('sale_price') ? ' is-invalid' : ''),
+                    'placeholder' => __('Price')
+                ])
+            }}
+            <span class="input-group-addon">
+                {{ config('vanilo.framework.currency.code') }}
+            </span>
+        </div>
+        @if ($errors->has('sale_price'))
+            <input hidden class="form-control is-invalid">
+            <div class="invalid-feedback">{{ $errors->first('sale_price') }}</div>
+        @endif
+    </div>
 </div>
 
 <hr>
