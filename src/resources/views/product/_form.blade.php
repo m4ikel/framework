@@ -37,6 +37,7 @@
 
 <div class="form-row">
     <div class="form-group col-12 col-md-6 col-xl-4">
+        <label class="form-control-label">{{ __('Price') }}</label>
         <div class="input-group">
             {{ Form::text('price', null, [
                     'class' => 'form-control' . ($errors->has('price') ? ' is-invalid' : ''),
@@ -53,10 +54,11 @@
         @endif
     </div>
     <div class="form-group col-12 col-md-6 col-xl-4">
+        <label class="form-control-label">{{ __('Sale Price') }}</label>
         <div class="input-group">
             {{ Form::text('sale_price', null, [
                     'class' => 'form-control' . ($errors->has('sale_price') ? ' is-invalid' : ''),
-                    'placeholder' => __('Price')
+                    'placeholder' => __('Sale Price')
                 ])
             }}
             <span class="input-group-addon">
